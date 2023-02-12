@@ -42,9 +42,7 @@ def get_concepts(PAT, USER_ID, APP_ID, MODEL_ID, MODEL_VERSION_ID, IMAGE_FILE_LO
         concepts.append(concept.name)
 
     return concepts
-path = "G:\\python_coding\\auto image upload\\images\\to_upload"
+path = "path"
 for image in os.listdir(path):
-
-    #keywords = get_concepts("10b8f55d6c7d4eaf915be2c70fc1b4b7","xs512avo61rr","image_keyworder","general-image-recognition","aa7f35c01e0642fda5cf400f543e7c40",f"{path}\\{image}")
-    #os.rename(f"{path}\\{image}",str(keywords))
-    os.rename(f"{path}\\{image}",f"{path}\\{image}.jpg")
+    keywords = get_concepts("10b8f55d6c7d4eaf915be2c70fc1b4b7","xs512avo61rr","image_keyworder","general-image-recognition","aa7f35c01e0642fda5cf400f543e7c40",f"{path}\\{image}")
+    os.rename(f"{path}\\{image}",f"{path}\\{str(keywords)}.jpg")
